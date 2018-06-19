@@ -42,6 +42,11 @@ This "tutorial" is not going to go super deep into the details, instead, it's go
 
 ## Starting the environment
 
+All components will be downloaded automatically except for Arista devices.  If not already added, download the image using the link above, and add the device to your docker image repository with the command:
+    
+    docker import cEOS-lab.tar.xz ceosimage:4.20.5F
+
+
 All the components will run on different containers so you don't have to worry about the environment. Just start everything by executing:
 
 	make start
