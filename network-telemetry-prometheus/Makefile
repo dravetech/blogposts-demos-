@@ -42,7 +42,7 @@ start_ceos:
 		-e ETBA=1 \
 		-e INTFTYPE=eth \
 		ceosimage:4.20.5F /sbin/init
-	docker network connect prometheus-nornir-snmp-replacement_management --ip 10.200.200.$(IP) $(DEVICE)
+	docker network connect networktelemetryprometheus_management --ip 10.200.200.$(IP) $(DEVICE)
 ifeq ($(DEVICE), $(SPINE00))
 	docker network connect prometheus-nornir-snmp-replacement_link0 --ip 10.200.201.$(IP) $(DEVICE)
 	docker network connect prometheus-nornir-snmp-replacement_link1 --ip 10.200.202.$(IP) $(DEVICE)
